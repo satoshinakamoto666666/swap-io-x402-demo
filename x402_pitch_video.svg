@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14F195"/>
+      <stop offset="100%" stop-color="#9945FF"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 36px 'Segoe UI', system-ui, sans-serif; fill: #F8FAFC; }
+      .subtitle { font: 600 22px 'Segoe UI', system-ui, sans-serif; fill: #14F195; }
+      .body { font: 400 18px 'Segoe UI', system-ui, sans-serif; fill: #CBD5E1; }
+      .mono { font: 500 15px 'Consolas', 'Courier New', monospace; fill: #38BDF8; }
+      .badge { font: 700 14px 'Segoe UI', system-ui, sans-serif; fill: #090D16; }
+      .scene { opacity: 0; animation-duration: 90s; animation-iteration-count: infinite; }
+      .s1 { animation-name: fadeS1; }
+      .s2 { animation-name: fadeS2; }
+      .s3 { animation-name: fadeS3; }
+      .s4 { animation-name: fadeS4; }
+      .s5 { animation-name: fadeS5; }
+      @keyframes fadeS1 { 0%, 18% { opacity: 1; } 20%, 100% { opacity: 0; } }
+      @keyframes fadeS2 { 0%, 19% { opacity: 0; } 20%, 38% { opacity: 1; } 40%, 100% { opacity: 0; } }
+      @keyframes fadeS3 { 0%, 39% { opacity: 0; } 40%, 58% { opacity: 1; } 60%, 100% { opacity: 0; } }
+      @keyframes fadeS4 { 0%, 59% { opacity: 0; } 60%, 78% { opacity: 1; } 80%, 100% { opacity: 0; } }
+      @keyframes fadeS5 { 0%, 79% { opacity: 0; } 80%, 99% { opacity: 1; } 100% { opacity: 0; } }
+      @keyframes progress { 0% { width: 0px; } 100% { width: 1160px; } }
+      .bar { animation: progress 90s linear infinite; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="60" y="40" width="1160" height="600" rx="16" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+
+  <!-- Top Header -->
+  <rect x="85" y="65" width="220" height="32" rx="16" fill="url(#accent)"/>
+  <text x="195" y="86" text-anchor="middle" class="badge">SWAP.IO x402 PITCH (90s)</text>
+  <text x="325" y="87" class="mono">Agent Wallet: Aw2hhJvjewAcxssyWMzKmFge6jWxEzN6GiFQgyZNKakt</text>
+  <text x="1190" y="87" text-anchor="end" class="mono">hermes.swap.io</text>
+
+  <!-- Scene 1 (0-18s): Concrete Use Case Pitch -->
+  <g class="scene s1">
+    <text x="90" y="150" class="subtitle">01 / CONCRETE USE CASE (0:00 - 0:18)</text>
+    <text x="90" y="200" class="title">Autonomous Telegram Portfolio Rebalancer Paying Per Swap via x402</text>
+    <text x="90" y="250" class="body">Imagine a non-custodial Telegram &amp; Solana Drift-Threshold Rebalancer Bot managing</text>
+    <text x="90" y="280" class="body">hundreds of user wallets. It checks portfolio drift every hour, but only executes a swap</text>
+    <text x="90" y="310" class="body">when SOL/USDC allocation drifts &gt;5%.</text>
+    <rect x="90" y="350" width="1100" height="220" rx="12" fill="#1E293B" stroke="#14F195" stroke-width="1.5"/>
+    <text x="120" y="395" class="subtitle">How Revenue &amp; Costs Align 1:1</text>
+    <text x="120" y="435" class="body">• User pays the Telegram bot 0.05 USDC only when a rebalance swap actually triggers.</text>
+    <text x="120" y="470" class="body">• Bot pays Swap.io Hermes $0.003007 USDC per quote + $0.003000 per build-tx via HTTP x402.</text>
+    <text x="120" y="505" class="body">• Zero idle monthly SaaS burn, zero credit cards, zero API keys to rotate or leak.</text>
+    <text x="120" y="540" class="mono">Net Bot Margin per Rebalance: +$0.043993 USDC (88% gross margin, $0 fixed overhead)</text>
+  </g>
+
+  <!-- Scene 2 (18-36s): The x402 Protocol Flow -->
+  <g class="scene s2">
+    <text x="90" y="150" class="subtitle">02 / THE x402 FLOW STEP-BY-STEP (0:18 - 0:36)</text>
+    <text x="90" y="200" class="title">Request → HTTP 402 → Gasless USDC Micropayment → Ranked Quotes</text>
+    <rect x="90" y="240" width="250" height="320" rx="12" fill="#1E293B" stroke="#38BDF8"/>
+    <text x="110" y="280" class="subtitle">1. POST /v1/swap/quote</text>
+    <text x="110" y="320" class="body">Agent sends SOL→USDC</text>
+    <text x="110" y="350" class="body">swap parameters with</text>
+    <text x="110" y="380" class="body">no API key or account.</text>
+
+    <rect x="370" y="240" width="250" height="320" rx="12" fill="#1E293B" stroke="#F59E0B"/>
+    <text x="390" y="280" class="subtitle">2. HTTP 402 Challenge</text>
+    <text x="390" y="320" class="body">Hermes returns exact</text>
+    <text x="390" y="350" class="body">price: 3007 atomic USDC</text>
+    <text x="390" y="380" class="body">($0.003007) + gasless</text>
+    <text x="390" y="410" class="body">feePayer address.</text>
+
+    <rect x="650" y="240" width="250" height="320" rx="12" fill="#1E293B" stroke="#14F195"/>
+    <text x="670" y="280" class="subtitle">3. Sign X-PAYMENT</text>
+    <text x="670" y="320" class="body">Agent signs SPL USDC</text>
+    <text x="670" y="350" class="body">TransferChecked (or</text>
+    <text x="670" y="380" class="body">Base EIP-3009). Needs</text>
+    <text x="670" y="410" class="body">0 SOL for payment gas!</text>
+
+    <rect x="930" y="240" width="260" height="320" rx="12" fill="#1E293B" stroke="#9945FF"/>
+    <text x="950" y="280" class="subtitle">4. 200 OK + Receipt</text>
+    <text x="950" y="320" class="body">Routhex returns ranked</text>
+    <text x="950" y="350" class="body">Jupiter/DFlow/OKX quotes</text>
+    <text x="950" y="380" class="body">+ X-PAYMENT-RESPONSE</text>
+    <text x="950" y="410" class="body">on-chain receipt.</text>
+  </g>
+
+  <!-- Scene 3 (36-54s): Why x402 Beats API Keys & Subscriptions -->
+  <g class="scene s3">
+    <text x="90" y="150" class="subtitle">03 / WHY x402 BEATS API KEYS &amp; SUBSCRIPTIONS (0:36 - 0:54)</text>
+    <text x="90" y="200" class="title">Built for Autonomous Agents, Not Corporate Billing Desks</text>
+    <rect x="90" y="245" width="530" height="320" rx="12" fill="#1E293B" stroke="#EF4444"/>
+    <text x="120" y="290" class="subtitle" fill="#EF4444">Legacy API Keys &amp; Subscriptions</text>
+    <text x="120" y="335" class="body">✗ Requires human KYC, Stripe card &amp; $49-$299/mo plan</text>
+    <text x="120" y="375" class="body">✗ Fixed monthly burn even during quiet market weeks</text>
+    <text x="120" y="415" class="body">✗ Leaked API key drains entire monthly quota</text>
+    <text x="120" y="455" class="body">✗ Hard rate limits throttle volatile rebalance bursts</text>
+
+    <rect x="660" y="245" width="530" height="320" rx="12" fill="#1E293B" stroke="#14F195"/>
+    <text x="690" y="290" class="subtitle">Swap.io Hermes x402 Protocol</text>
+    <text x="690" y="335" class="body">✓ Permissionless: any Solana/Base wallet starts in 0ms</text>
+    <text x="690" y="375" class="body">✓ Pay-per-call ($0.003): 4xx/5xx errors are NEVER charged</text>
+    <text x="690" y="415" class="body">✓ Gasless payment: Swap.io feePayer covers network SOL</text>
+    <text x="690" y="455" class="body">✓ Paid traffic is unthrottled during market volatility</text>
+  </g>
+
+  <!-- Scene 4 (54-72s): Bonus Working Demo against Live Hermes API -->
+  <g class="scene s4">
+    <text x="90" y="150" class="subtitle">04 / WORKING DEMO: LIVE HERMES x402 CALL TRACE (0:54 - 1:12)</text>
+    <text x="90" y="200" class="title">Verified Live Against https://hermes.swap.io (Slot #468257539)</text>
+    <rect x="90" y="235" width="1100" height="340" rx="12" fill="#020617" stroke="#38BDF8"/>
+    <text x="115" y="275" class="mono">$ python hermes_x402_agent.py</text>
+    <text x="115" y="310" class="mono">[1] GET https://hermes.swap.io/v1/info -&gt; HTTP 200 (12 endpoints discovered)</text>
+    <text x="115" y="345" class="mono">[2] POST https://hermes.swap.io/v1/swap/quote (1.0 SOL -&gt; USDC) -&gt; HTTP 402 Payment Required</text>
+    <text x="115" y="380" class="mono">    maxAmountRequired: "3007" ($0.003007 USDC)</text>
+    <text x="115" y="415" class="mono">    payTo Wallet: BPz2u6eoWLervxEqfpsMCVmKk7h6fEVsd7L5rvEibMfD</text>
+    <text x="115" y="450" class="mono">    payTo USDC ATA: 89jtoCobZ3Ako2bUmdcRRDkMGYifySVF89zkRv6PRjKP</text>
+    <text x="115" y="485" class="mono">    Facilitator feePayer: 2wKupLR9q6wXYppw8Gr2NvWxKBUqm4PPJKkQfoxHDBg4</text>
+    <text x="115" y="520" class="mono">[3] Signed Solana v0 VersionedTransaction + Base EIP-3009 X-PAYMENT -&gt; Verified by Hermes!</text>
+    <text x="115" y="555" class="mono">[4] POST /v1/swap/build-tx uses best.providerQuote (raw object) + X-PAYMENT-RESPONSE check</text>
+  </g>
+
+  <!-- Scene 5 (72-90s): Call to Action & Verification Links -->
+  <g class="scene s5">
+    <text x="90" y="150" class="subtitle">05 / ON-CHAIN VERIFICATION &amp; OPEN-SOURCE REPO (1:12 - 1:30)</text>
+    <text x="90" y="200" class="title">Ready for Autonomous Agent Production on Solana Mainnet</text>
+    <rect x="90" y="245" width="1100" height="320" rx="12" fill="#1E293B" stroke="#9945FF"/>
+    <text x="120" y="295" class="subtitle">Solscan &amp; Repository Verification Links</text>
+    <text x="120" y="340" class="mono">• Agent Solana Wallet: https://solscan.io/account/Aw2hhJvjewAcxssyWMzKmFge6jWxEzN6GiFQgyZNKakt</text>
+    <text x="120" y="380" class="mono">• Swap.io Hermes PayTo: https://solscan.io/account/BPz2u6eoWLervxEqfpsMCVmKk7h6fEVsd7L5rvEibMfD</text>
+    <text x="120" y="420" class="mono">• Swap.io Hermes USDC ATA: https://solscan.io/account/89jtoCobZ3Ako2bUmdcRRDkMGYifySVF89zkRv6PRjKP</text>
+    <text x="120" y="460" class="mono">• Swap.io Gasless FeePayer: https://solscan.io/account/2wKupLR9q6wXYppw8Gr2NvWxKBUqm4PPJKkQfoxHDBg4</text>
+    <text x="120" y="510" class="subtitle">Built for @swapdotio &amp; @Superteam • Superteam Earn AGENT_ALLOWED Bounty</text>
+  </g>
+
+  <!-- Bottom Progress Bar -->
+  <rect x="60" y="660" width="1160" height="10" rx="5" fill="#1E293B"/>
+  <rect x="60" y="660" width="1160" height="10" rx="5" fill="url(#accent)" class="bar"/>
+  <text x="60" y="695" class="mono">0:00 Pitch Scenario</text>
+  <text x="350" y="695" class="mono">0:18 x402 Protocol Flow</text>
+  <text x="650" y="695" class="mono">0:36 Why x402 Wins</text>
+  <text x="920" y="695" class="mono">0:54 Live Hermes Demo</text>
+</svg>

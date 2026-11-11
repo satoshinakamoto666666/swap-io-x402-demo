@@ -1,0 +1,186 @@
+{
+  "bounty_id": "c4b303ec-66ad-417c-8ae4-b35300876387",
+  "bounty_slug": "make-a-video-about-our-x402-feature",
+  "sponsor": "swap.io",
+  "agent_access": "AGENT_ALLOWED",
+  "reward_usdc": 500.0,
+  "wallets": {
+    "solana_payout_wallet": "Aw2hhJvjewAcxssyWMzKmFge6jWxEzN6GiFQgyZNKakt",
+    "solana_user_usdc_ata": "HBSGNsEPwLmnxadaHbzhfR6fUUPpRhL1frUvsX9LR6Cu",
+    "evm_payout_wallet": "0x971b573b47357c22a67FcE8c56Aaeb478356C942"
+  },
+  "hermes_discovery": {
+    "info_url": "https://hermes.swap.io/v1/info",
+    "http_status": 200,
+    "endpoints_count": 12,
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/v1/swap/quote",
+        "operation": "quote",
+        "base_price_atomic_usdc": "3000",
+        "payment": "x402"
+      },
+      {
+        "method": "POST",
+        "path": "/v1/swap/quote-2.0",
+        "operation": "quote-2.0",
+        "base_price_atomic_usdc": "3259",
+        "payment": "x402"
+      },
+      {
+        "method": "POST",
+        "path": "/v1/swap/build-tx",
+        "operation": "build-tx",
+        "base_price_atomic_usdc": "3000",
+        "payment": "x402"
+      },
+      {
+        "method": "POST",
+        "path": "/v1/swap/submit-tx",
+        "operation": "submit-tx",
+        "base_price_atomic_usdc": "3019",
+        "payment": "x402"
+      },
+      {
+        "method": "POST",
+        "path": "/v1/transfer/build-tx",
+        "operation": "transfer-build-tx",
+        "base_price_atomic_usdc": "3298",
+        "payment": "x402"
+      },
+      {
+        "method": "GET",
+        "path": "/v1/swap/status",
+        "operation": "status",
+        "base_price_atomic_usdc": "3000",
+        "payment": "x402"
+      },
+      {
+        "method": "POST",
+        "path": "/v1/orders/limit/create",
+        "operation": "order-limit-create",
+        "base_price_atomic_usdc": "4801",
+        "payment": "x402"
+      },
+      {
+        "method": "POST",
+        "path": "/v1/orders/dca/create",
+        "operation": "order-dca-create",
+        "base_price_atomic_usdc": "4782",
+        "payment": "x402"
+      },
+      {
+        "method": "POST",
+        "path": "/v1/orders/cancel",
+        "operation": "order-cancel",
+        "base_price_atomic_usdc": "3019",
+        "payment": "x402"
+      },
+      {
+        "method": "GET",
+        "path": "/v1/orders",
+        "operation": "order-list",
+        "base_price_atomic_usdc": "3000",
+        "payment": "x402"
+      },
+      {
+        "method": "GET",
+        "path": "/v1/orders/{order}",
+        "operation": "order-get",
+        "base_price_atomic_usdc": "3000",
+        "payment": "x402"
+      },
+      {
+        "method": "GET",
+        "path": "/v1/info",
+        "operation": null,
+        "base_price_atomic_usdc": null,
+        "payment": "none"
+      }
+    ]
+  },
+  "live_x402_quote_challenge": {
+    "endpoint": "https://hermes.swap.io/v1/swap/quote",
+    "http_status": 402,
+    "x402_version": 1,
+    "quote_price_atomic_usdc": "3007",
+    "quote_price_usd": 0.003007,
+    "dca_5_slice_price_atomic_usdc": "11352",
+    "solana_payment_terms": {
+      "scheme": "exact",
+      "network": "solana",
+      "maxAmountRequired": "3007",
+      "resource": "https://hermes.swap.io/v1/swap/quote",
+      "description": "Paid swap API (routhex): quote and build unsigned transactions; caller signs and broadcasts",
+      "mimeType": "application/json",
+      "payTo": "BPz2u6eoWLervxEqfpsMCVmKk7h6fEVsd7L5rvEibMfD",
+      "maxTimeoutSeconds": 60,
+      "asset": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "extra": {
+        "feePayer": "2wKupLR9q6wXYppw8Gr2NvWxKBUqm4PPJKkQfoxHDBg4"
+      }
+    },
+    "base_payment_terms": {
+      "scheme": "exact",
+      "network": "base",
+      "maxAmountRequired": "3007",
+      "resource": "https://hermes.swap.io/v1/swap/quote",
+      "description": "Paid swap API (routhex): quote and build unsigned transactions; caller signs and broadcasts",
+      "mimeType": "application/json",
+      "payTo": "0xC22f661733B85C1349F7C83EE0B2BCF3234603dE",
+      "maxTimeoutSeconds": 60,
+      "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "extra": {
+        "name": "USD Coin",
+        "version": "2"
+      }
+    }
+  },
+  "solana_x402_exact_payment_verification": {
+    "solana_mainnet_slot": 468257539,
+    "recent_blockhash": "5Zv5zmz8d1nFA4okMKLuWs8BaiGmLE9xQRjmiWh5ZsoA",
+    "swap_io_pay_to_wallet": "BPz2u6eoWLervxEqfpsMCVmKk7h6fEVsd7L5rvEibMfD",
+    "swap_io_pay_to_usdc_ata": "89jtoCobZ3Ako2bUmdcRRDkMGYifySVF89zkRv6PRjKP",
+    "swap_io_gasless_fee_payer": "2wKupLR9q6wXYppw8Gr2NvWxKBUqm4PPJKkQfoxHDBg4",
+    "ed25519_signature_verified": true,
+    "hermes_facilitator_response_status": 402,
+    "hermes_facilitator_stage_reached": "transaction_simulation_failed",
+    "signature_and_recipient_accepted_by_hermes": true,
+    "payment_artifact": {
+      "x_payment_header": "eyJ4NDAyVmVyc2lvbiI6IDEsICJzY2hlbWUiOiAiZXhhY3QiLCAibmV0d29yayI6ICJzb2xhbmEiLCAicGF5bG9hZCI6IHsidHJhbnNhY3Rpb24iOiAiQWdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFCM3dlbWRRaDFPU0xXSEhjeGMrM2ltdTBIUHlLOS9ucVdNZFNKMzFFYllOSDRISXFIK1ZwZCs0L25RcUx1aXlhbEZEOFpnWDVnOExrbEMxT3BFbHlBRGdBSUJBd2NjeG03VU4xRVJXa0sxa0ZFeXhQWm9Nb1lSNWVqZXQ5aGlXRjBxTlZIUUFVU0ozeGs2a2R1QUI3R01jbzR3OEkvWE1Oc0Y1VzRGTEpyQzFzdE41NlNrT2dFUVpMZHhIMFlpY3E4VlkzWVpNZHlVNWhDVGpQQ1JVdzdDdjBUQlB4dHFQdlJMaTBEZTlDNWhHQ0hNZ0xrZkhiMjhDLzY1Y09XZU13eVAvdlova2dNR1JtL2xJUmN5Lyt5dHVuTERtK2U4ak9XN3hmY1NheXhEbXpwQUFBQUF4dnA2ODc3YnJUbzlaZk5xcThsME1iRzc1TUxTOXVEa2ZLWUNBMFV2WFdFRzNmYmgxMldoazluTDRVYk82M21zSExTRjdWOWJONUU2alBXRmZ2OEFxVVBkVzdpZnQ1Zkx2MFQ1Rkh5SlRocEMxZnFHdXJVYU5uZ2FndTdvNG5GOUF3UUFCUUpRd3dBQUJBQUpBd0VBQUFBQUFBQUFCZ1FDQlFNQkNneS9Dd0FBQUFBQUFBWUEifX0=",
+      "payer_pubkey": "5cYf9SjvY2zSNcRJeSCAcnQmyA8a89JQqHEw53LTouhM",
+      "source_usdc_ata": "4uRb5PCDJrEvvTi9MA5UNe4e7SUS3kw8ysRxkcaF47Jr",
+      "recipient_wallet": "BPz2u6eoWLervxEqfpsMCVmKk7h6fEVsd7L5rvEibMfD",
+      "recipient_usdc_ata": "89jtoCobZ3Ako2bUmdcRRDkMGYifySVF89zkRv6PRjKP",
+      "facilitator_fee_payer": "2wKupLR9q6wXYppw8Gr2NvWxKBUqm4PPJKkQfoxHDBg4",
+      "amount_atomic_usdc": "3007",
+      "amount_usdc": 0.003007,
+      "recent_blockhash": "5Zv5zmz8d1nFA4okMKLuWs8BaiGmLE9xQRjmiWh5ZsoA",
+      "ed25519_signature_hex": "77c1e99d421d4e48b5871dcc5cfb78a6bb41cfc8af7f9ea58c752277d446d8347e0722a1fe56977ee3f9d0a8bba2c9a9450fc6605f983c2e4942d4ea44972003",
+      "wire_transaction_base64": "AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB3wemdQh1OSLWHHcxc+3imu0HPyK9/nqWMdSJ31EbYNH4HIqH+Vpd+4/nQqLuiyalFD8ZgX5g8LklC1OpElyADgAIBAwccxm7UN1ERWkK1kFEyxPZoMoYR5ejet9hiWF0qNVHQAUSJ3xk6kduAB7GMco4w8I/XMNsF5W4FLJrC1stN56SkOgEQZLdxH0Yicq8VY3YZMdyU5hCTjPCRUw7Cv0TBPxtqPvRLi0De9C5hGCHMgLkfHb28C/65cOWeMwyP/vZ/kgMGRm/lIRcy/+ytunLDm+e8jOW7xfcSayxDmzpAAAAAxvp6877brTo9ZfNqq8l0MbG75MLS9uDkfKYCA0UvXWEG3fbh12Whk9nL4UbO63msHLSF7V9bN5E6jPWFfv8AqUPdW7ift5fLv0T5FHyJThpC1fqGurUaNngagu7o4nF9AwQABQJQwwAABAAJAwEAAAAAAAAABgQCBQMBCgy/CwAAAAAAAAYA"
+    }
+  },
+  "base_x402_eip3009_payment_verification": {
+    "chain_id": 8453,
+    "usdc_contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "swap_io_pay_to_address": "0xC22f661733B85C1349F7C83EE0B2BCF3234603dE",
+    "eip712_signature_verified": true,
+    "hermes_facilitator_response_status": 402,
+    "hermes_facilitator_stage_reached": "invalid_exact_evm_insufficient_balance",
+    "signature_accepted_by_hermes": true,
+    "payment_artifact": {
+      "x_payment_header": "eyJ4NDAyVmVyc2lvbiI6IDEsICJzY2hlbWUiOiAiZXhhY3QiLCAibmV0d29yayI6ICJiYXNlIiwgInBheWxvYWQiOiB7InNpZ25hdHVyZSI6ICIweGI5MDZhYjlkODJiYjQ1ZDFhMzQ0MGVmNmUxODZhOTdkZWE2NzJlZjJjZTMwYjQ1MzdmYjI1ZTkxM2NmOTE5MmQ2NjIyZDliZjcyMzk2MGJkYTg1MzM3YzdjYzdjN2QyNDZiNWIxZTAzNmIzY2UwODIxOWE5ODQ0ZmYxYmE0ZjVlMWMiLCAiYXV0aG9yaXphdGlvbiI6IHsiZnJvbSI6ICIweDg4Mzk0ZjAzMkZjMkE2MDAxNTcxN0MzYTk4ZjNCNWQ5QUEzQmI2MDIiLCAidG8iOiAiMHhDMjJmNjYxNzMzQjg1QzEzNDlGN0M4M0VFMEIyQkNGMzIzNDYwM2RFIiwgInZhbHVlIjogIjMwMDciLCAidmFsaWRBZnRlciI6ICIxNzk0NDI4ODU4IiwgInZhbGlkQmVmb3JlIjogIjE3OTQ0MzI1MTgiLCAibm9uY2UiOiAiMHg2ZTU3NmI4NjQwZjZhZDg4YjViY2E0OGNhYTJiYzViNmZhMmE3ZDkzYjA2ZjZhZTg1MmMxODIyN2M0MDNmZWUwIn19fQ==",
+      "signer_address": "0x88394f032Fc2A60015717C3a98f3B5d9AA3Bb602",
+      "recipient_address": "0xC22f661733B85C1349F7C83EE0B2BCF3234603dE",
+      "usdc_contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "chain_id": 8453,
+      "amount_atomic_usdc": "3007",
+      "amount_usdc": 0.003007,
+      "nonce": "0x6e576b8640f6ad88b5bca48caa2bc5b6fa2a7d93b06f6ae852c18227c403fee0",
+      "eip712_signature": "0xb906ab9d82bb45d1a3440ef6e186a97dea672ef2ce30b4537fb25e913cf9192d6622d9bf723960bda85337c7cc7c7d246b5b1e036b3ce08219a9844ff1ba4f5e1c"
+    }
+  },
+  "generated_at": "2026-11-11T20:28:39.457836+00:00",
+  "execution_time_ms": 2705.87
+}
